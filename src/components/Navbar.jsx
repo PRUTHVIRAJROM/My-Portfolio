@@ -11,18 +11,18 @@ export default function Navbar({ name, darkMode, onToggleDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/80 backdrop-blur dark:border-slate-800 dark:bg-slate-950/80">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
-        <a href="#top" className="text-lg font-bold text-slate-900 dark:text-white">
+    <header className="sticky top-0 z-10 border-b border-ink/15 bg-paper/90 backdrop-blur-sm dark:border-white/15 dark:bg-blueprint/90">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3 font-mono text-xs">
+        <a href="#top" className="font-medium">
           {name}
         </a>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-6">
           {/* Desktop links: hidden on small screens, shown from `md` up */}
           <ul className="hidden gap-6 md:flex">
             {links.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="text-sm font-medium hover:text-indigo-500">
+                <a href={link.href} className="hover:underline hover:underline-offset-4">
                   {link.label}
                 </a>
               </li>
@@ -32,34 +32,28 @@ export default function Navbar({ name, darkMode, onToggleDarkMode }) {
           <button
             type="button"
             onClick={onToggleDarkMode}
-            aria-label="Toggle dark mode"
-            className="ml-4 rounded-full p-2 text-xl hover:bg-slate-100 dark:hover:bg-slate-800"
+            className="border border-current px-2.5 py-1.5 hover:bg-ink hover:text-paper dark:hover:bg-white dark:hover:text-blueprint"
           >
-            {darkMode ? '☀️' : '🌙'}
+            {darkMode ? 'Paper mode' : 'Blueprint mode'}
           </button>
 
           {/* Mobile menu button: only shown below `md` */}
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
             aria-expanded={menuOpen}
-            className="rounded-md p-2 text-xl hover:bg-slate-100 md:hidden dark:hover:bg-slate-800"
+            className="md:hidden"
           >
-            {menuOpen ? '✕' : '☰'}
+            {menuOpen ? 'Close' : 'Menu'}
           </button>
         </div>
       </nav>
 
       {menuOpen && (
-        <ul className="border-t border-slate-200 px-4 py-2 md:hidden dark:border-slate-800">
+        <ul className="border-t border-ink/15 px-5 py-2 font-mono text-sm md:hidden dark:border-white/15">
           {links.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={() => setMenuOpen(false)}
-                className="block py-2 font-medium hover:text-indigo-500"
-              >
+              <a href={link.href} onClick={() => setMenuOpen(false)} className="block py-2.5">
                 {link.label}
               </a>
             </li>

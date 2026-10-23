@@ -1,30 +1,32 @@
 import SectionHeading from './SectionHeading.jsx'
 
+// Each skill group is a breadboard, and each skill is a chip plugged into it.
+// The `breadboard` and `chip` classes are defined in index.css.
 export default function Skills({ skills }) {
   return (
-    <section id="skills" className="scroll-mt-16 bg-slate-50 dark:bg-slate-900">
-      <div className="mx-auto max-w-5xl px-4 py-16">
-        <SectionHeading title="Skills" subtitle="Things I use, and things I'm learning." />
-        <div className="grid gap-6 md:grid-cols-3">
-          {skills.map((group) => (
-            <div
-              key={group.category}
-              className="rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-950"
-            >
-              <h3 className="font-semibold text-slate-900 dark:text-white">{group.category}</h3>
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <li
-                    key={item}
-                    className="rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 dark:bg-indigo-500/10 dark:text-indigo-300"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+    <section id="skills" className="mx-auto max-w-6xl scroll-mt-16 px-5 py-16">
+      <SectionHeading title="Skills" subtitle="Blah blah blah blah blah." />
+      <div className="space-y-6">
+        {skills.map((group) => (
+          <div
+            key={group.category}
+            className="breadboard border border-ink/10 px-5 pt-5 pb-8 dark:border-white/20"
+          >
+            <h3 className="font-mono text-[11px] tracking-wide text-graphite dark:text-blueprint-ink">
+              {group.category}
+            </h3>
+            <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-9">
+              {group.items.map((item) => (
+                <li
+                  key={item}
+                  className="chip px-5 py-3 font-mono text-xs text-white transition-transform motion-safe:hover:-translate-y-0.5"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   )

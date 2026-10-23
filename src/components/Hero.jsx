@@ -1,37 +1,42 @@
 export default function Hero({ profile }) {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-4 py-20 sm:py-28">
-      <div className="flex flex-col-reverse items-center gap-10 md:flex-row md:justify-between">
-        <div className="text-center md:text-left">
-          <p className="font-medium text-indigo-500">Hi, I'm</p>
-          <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl dark:text-white">
+    <section id="top" className="mx-auto max-w-6xl px-5 pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <div className="grid items-end gap-12 md:grid-cols-[1fr_auto]">
+        <div>
+          <p className="font-mono text-xs text-graphite dark:text-blueprint-ink">
+            {profile.role} · {profile.location}
+          </p>
+          <h1 className="mt-5 font-display text-5xl leading-none font-bold tracking-tight font-stretch-semi-expanded sm:text-7xl">
             {profile.name}
           </h1>
-          <p className="mt-3 text-lg font-medium">{profile.role}</p>
-          <p className="mt-4 max-w-xl text-slate-500 dark:text-slate-400">{profile.tagline}</p>
-          <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">📍 {profile.location}</p>
+          <p className="mt-8 max-w-[38ch] text-xl leading-relaxed text-graphite dark:text-blueprint-ink">
+            {profile.tagline}
+          </p>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
+          <div className="mt-10 flex flex-wrap gap-3 font-mono text-xs">
             <a
               href="#projects"
-              className="rounded-lg bg-indigo-600 px-5 py-2.5 font-semibold text-white hover:bg-indigo-500"
+              className="bg-ink px-5 py-3.5 text-paper hover:bg-wire-blue dark:bg-white dark:text-blueprint dark:hover:bg-blueprint-ink"
             >
-              See my work
+              See projects ↓
             </a>
             <a
-              href="#contact"
-              className="rounded-lg border border-slate-300 px-5 py-2.5 font-semibold hover:border-indigo-500 dark:border-slate-700"
+              href={`mailto:${profile.email}`}
+              className="border border-ink px-5 py-3.5 hover:bg-ink hover:text-paper dark:border-white dark:hover:bg-white dark:hover:text-blueprint"
             >
-              Get in touch
+              Email me
             </a>
           </div>
         </div>
 
-        <img
-          src={profile.avatar}
-          alt={profile.name}
-          className="size-40 rounded-full ring-4 ring-indigo-500/30 sm:size-56"
-        />
+        {/* Photo with crop marks in each corner, like a print proof */}
+        <figure className="relative w-48 justify-self-start p-3 sm:w-60 md:justify-self-end">
+          <span className="absolute top-0 left-0 size-4 border-t border-l border-ink/40 dark:border-white/50" />
+          <span className="absolute top-0 right-0 size-4 border-t border-r border-ink/40 dark:border-white/50" />
+          <span className="absolute bottom-0 left-0 size-4 border-b border-l border-ink/40 dark:border-white/50" />
+          <span className="absolute right-0 bottom-0 size-4 border-r border-b border-ink/40 dark:border-white/50" />
+          <img src={profile.avatar} alt={profile.name} className="aspect-[4/5] w-full object-cover grayscale" />
+        </figure>
       </div>
     </section>
   )

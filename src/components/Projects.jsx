@@ -22,19 +22,20 @@ export default function Projects({ projects }) {
   }
 
   return (
-    <section id="projects" className="mx-auto max-w-5xl scroll-mt-16 px-4 py-16">
-      <SectionHeading title="Projects" subtitle="A few things I've built recently." />
+    <section id="projects" className="mx-auto max-w-6xl scroll-mt-16 px-5 py-16">
+      <SectionHeading title="Projects" subtitle="Blah blah blah blah blah blah." />
 
-      <div className="mb-8 flex flex-wrap gap-2">
+      <div className="mb-10 flex flex-wrap gap-2 font-mono text-xs">
         {tags.map((tag) => (
           <button
             key={tag}
             type="button"
             onClick={() => setActiveTag(tag)}
+            aria-pressed={tag === activeTag}
             className={
               tag === activeTag
-                ? 'rounded-full bg-indigo-600 px-4 py-1.5 text-sm font-semibold text-white'
-                : 'rounded-full border border-slate-300 px-4 py-1.5 text-sm font-medium hover:border-indigo-500 dark:border-slate-700'
+                ? 'border border-ink bg-ink px-3 py-2 text-paper dark:border-white dark:bg-white dark:text-blueprint'
+                : 'border border-ink/25 px-3 py-2 hover:border-ink dark:border-white/30 dark:hover:border-white'
             }
           >
             {tag}
@@ -42,7 +43,7 @@ export default function Projects({ projects }) {
         ))}
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-8 sm:grid-cols-2">
         {visibleProjects.map((project) => (
           <ProjectCard
             key={project.id}

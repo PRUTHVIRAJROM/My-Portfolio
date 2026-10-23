@@ -2,11 +2,11 @@
 // Components read from this file, so you can change the site without touching JSX.
 
 export const profile = {
-  name: 'Aarav Sharma',
-  role: 'First-year Computer Engineering student',
-  tagline: 'I build small, useful things for the web and learn something new every week.',
-  location: 'Pune, India',
-  email: 'aarav@example.com',
+  name: 'Blah Blah',
+  role: 'Blah blah, blah blah blah',
+  tagline: 'Blah blah blah blah, blah blah blah blah blah blah blah.',
+  location: 'Blah, Blah',
+  email: 'blah@example.com',
   avatar: '/avatar.svg',
   socials: [
     { label: 'GitHub', url: 'https://github.com/' },
@@ -15,56 +15,57 @@ export const profile = {
 }
 
 export const about = [
-  "I'm a first-year Computer Engineering student who got hooked on programming after making a calculator in C that only worked half the time.",
-  'These days I spend my evenings building web apps, solving problems on competitive programming sites, and breaking things on purpose to see how they work.',
-  "Right now I'm learning React and Tailwind CSS, and this portfolio is the first thing I've shipped to the internet.",
+  'Blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah.',
+  'Blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah.',
+  'Blah blah blah blah blah blah blah blah blah blah blah.',
 ]
 
 export const skills = [
-  { category: 'Languages', items: ['C', 'Python', 'JavaScript', 'HTML', 'CSS'] },
-  { category: 'Frameworks & Tools', items: ['React', 'Tailwind CSS', 'Vite', 'Git', 'GitHub'] },
-  { category: 'Currently learning', items: ['Data Structures', 'Node.js', 'SQL'] },
+  { category: 'Blah', items: ['Blah', 'Blah blah', 'Blah', 'Blah blah'] },
+  { category: 'Blah blah', items: ['Blah blah', 'Blah', 'Blah blah blah'] },
+  { category: 'Blah blah blah', items: ['Blah', 'Blah blah'] },
 ]
 
-// `accent` must be one of the keys in `accentClasses` in ProjectCard.jsx.
+// `wire` is the colour of the jumper wire down the side of each project card:
+// 'red', 'blue', 'green' or 'yellow' (see `wireClasses` in ProjectCard.jsx).
 export const projects = [
   {
     id: 1,
-    title: 'Weather Now',
-    description: 'A weather app that shows the forecast for any city using a free public API.',
-    image: '/projects/weather.svg',
-    tags: ['React', 'API'],
-    accent: 'sky',
+    title: 'Blah blah',
+    description: 'Blah blah blah blah blah blah blah blah blah blah blah.',
+    image: '/projects/blah-1.svg',
+    tags: ['Blah', 'Blah blah'],
+    wire: 'red',
     liveUrl: 'https://example.com',
     codeUrl: 'https://github.com/',
   },
   {
     id: 2,
-    title: 'Pomodoro Timer',
-    description: 'A focus timer with work and break sessions, sounds, and a daily streak counter.',
-    image: '/projects/pomodoro.svg',
-    tags: ['JavaScript', 'CSS'],
-    accent: 'rose',
+    title: 'Blah blah blah',
+    description: 'Blah blah blah blah blah, blah blah blah blah blah blah blah blah.',
+    image: '/projects/blah-2.svg',
+    tags: ['Blah'],
+    wire: 'blue',
     liveUrl: 'https://example.com',
     codeUrl: 'https://github.com/',
   },
   {
     id: 3,
-    title: 'Campus Notes',
-    description: 'A notes board where classmates can share lecture notes, sorted by subject.',
-    image: '/projects/notes.svg',
-    tags: ['React', 'Tailwind'],
-    accent: 'emerald',
+    title: 'Blah',
+    description: 'Blah blah blah blah blah blah blah blah blah blah blah blah.',
+    image: '/projects/blah-3.svg',
+    tags: ['Blah blah', 'Blah blah blah'],
+    wire: 'green',
     liveUrl: 'https://example.com',
     codeUrl: 'https://github.com/',
   },
   {
     id: 4,
-    title: 'Matrix Calculator',
-    description: 'A command-line program in C that adds, multiplies and inverts matrices.',
-    image: '/projects/matrix.svg',
-    tags: ['C'],
-    accent: 'amber',
+    title: 'Blah blah',
+    description: 'Blah blah blah blah blah blah blah.',
+    image: '/projects/blah-4.svg',
+    tags: ['Blah'],
+    wire: 'yellow',
     liveUrl: '',
     codeUrl: 'https://github.com/',
   },

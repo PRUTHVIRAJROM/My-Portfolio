@@ -1,8 +1,10 @@
 export default function SectionHeading({ title, subtitle }) {
   return (
-    <div className="mb-10">
-      <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{title}</h2>
-      {subtitle && <p className="mt-2 text-slate-500 dark:text-slate-400">{subtitle}</p>}
+    <div className="mb-10 border-t border-ink/20 pt-5 dark:border-white/25">
+      <h2 className="font-display text-3xl font-bold tracking-tight font-stretch-semi-expanded sm:text-4xl">
+        {title}
+      </h2>
+      {subtitle && <p className="mt-3 text-graphite dark:text-blueprint-ink">{subtitle}</p>}
     </div>
   )
 }

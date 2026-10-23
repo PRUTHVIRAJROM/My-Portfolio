@@ -25,7 +25,7 @@ export default function App() {
   }, [darkMode])
 
   return (
-    <div className="min-h-screen bg-white text-slate-700 dark:bg-slate-950 dark:text-slate-300">
+    <div className="min-h-screen font-sans text-ink dark:text-white">
       <Navbar
         name={profile.name}
         darkMode={darkMode}
