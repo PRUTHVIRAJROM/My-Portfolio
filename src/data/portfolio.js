@@ -2,15 +2,15 @@
 // Components read from this file, so you can change the site without touching JSX.
 
 export const profile = {
-  name: 'Blah Blah',
+  name: 'Pruthviraj Thawari',
   role: 'Blah blah, blah blah blah',
   tagline: 'Blah blah blah blah, blah blah blah blah blah blah blah.',
   location: 'Blah, Blah',
-  email: 'blah@example.com',
-  avatar: '/avatar.svg',
+  email: 'pruthvirjthavri@gmail.com',
+  avatar: "C:/Users/Asus/Downloads/250px-Hitler_portrait_crop.jpg_utm_source=hif.wikipedia.webp",
   socials: [
-    { label: 'GitHub', url: 'https://github.com/' },
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/' },
+    { label: 'GitHub', url: 'https://github.com/PRUTHVIRAJROM' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/pruthviraj-thawari-b13477437/' },
   ],
 }
 
